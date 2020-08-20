@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquerry.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style>
+        .ok {
+            height: 400px;
+            overflow-y: auto;
+        }
+        
+        .k {
+            height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--
+    <div class="">
+        <button class="color1 btn btn-danger  "> Accepter</button>
+    </div>
+    <div>
+        <button class="btn btn-submit">sytle 2</button>
+    </div>
+    <div>
+        <div>
+            <form action="" class="m-bg">
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" class="m-input" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" class="m-input" placeholder="Enter Password" name="psw" required>
+
+                    <label for=""><b>Maque your Choise</b></label>
+                    <select type="password" class="m-input" placeholder="Enter Password" name="psw" required>
+						<option> jgjvchg</option>
+						<option> ok la vcie</option>
+						<option> hahaha </option>
+					</select>
+                    <label>
+					  <input type="checkbox" checked="checked" name="remember"> Remember me
+					</label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <button type="submit" class="m-btn">ENVOYER</button>
+    </div>
+-->
+    <!--<div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div> -->
+    <!--   <div class="progress">
+        <div class="indeterminate"></div>
+    </div>
+
+    <div class="spinner-border text-secondary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    -->
+
+    <div class="row"></div>
+    <form class="col-md-5">
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control passwd">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Repeter le mot de passe Password</label>
+            <input type="password" class="form-control passwd1">
+        </div>
+
+        <div class="erreur"></div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div>
+        <button class="btn btn-primary send">Envoyer</button>
+    </div>
+    var-password var-passwdR Confirmez votre mot de passe
+    <div class="container row dflex justify-content-center mt-5">
+        <div class="col-md-6 ">
+            <div class="row">
+                <h5>Liste des elements disponnible</h5>
+            </div>
+
+            <div class="col-md-12 ok">
+
+            </div>
+
+        </div>
+        <div class="col-md-6 ">
+            <div class="row">
+                <h5>Liste des elements ajoutés</h5>
+            </div>
+
+            <div class="col-md-12 k">
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+</html>
+
+<script src="addOns/toasts.js"></script>
+<script src="script.js"></script>
+<script type="text/javascript">
+    const serveurSource = "http://localhost:8083";
+
+    function createAlert(value) {
+        var text = document.createElement("div");
+        text.classList.add("alert");
+        text.classList.add("alert-danger");
+        text.setAttribute("role", "alert");
+        text.append(value);
+        return text;
+    }
+    $(".passwd1").append(createAlert("il ya quelque chose"))
+
+    $(".passwd1").keyup(function() {
+        var passwd = $(".passwd").val();
+        var passwd1 = $(".passwd1").val();
+        // $(".erreur").hide(1000);
+        if (passwd != passwd1) {
+            $(".erreur").html("*Les mots de passe ne correspondent pas");
+            $(".erreur").css('color', 'red');
+            $(".erreur").show(8000);
+            return false;
+        } else {
+            $(".erreur").html("");
+            return true;
+        }
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+    $('.send').unbind("click").click(function() {
+        addEtablissement();
+    });
+
+    function addEtablissement() {
+        swal("Entrez le nom d'un etablissement ne figurant pas dans la liste pour l'ajouter", {
+                content: "input",
+                buttons: {
+                    cancel: true,
+                    confirm: "Ajouter"
+                }
+            })
+            .then((value) => {
+                if (!value) throw null;
+                sendEtablissement(value);
+            });
+    }
+
+    function sendEtablissement(nomEtablissement) {
+        var json = {
+            "nomEtablissement": nomEtablissement
+        }
+        console.log(json);
+        $.ajax({
+            url: serveurSource + "/etablissements",
+            method: "POST",
+            contentType: "application/json",
+            dataType: "json",
+            data: JSON.stringify(json),
+            success: function(data) {
+                console.log(data);
+                succesToastr("Opération effectuée", "Etablissement ajouté avec succes")
+            },
+            error: function(errMsg) {
+                console.log(errMsg);
+                swal({
+                    title: "Oops",
+                    text: "Cet etablissement existe probablement deja!",
+                    icon: "error",
+                    button: false
+                });
+            }
+        });
+    }
+
+    $('.m-btn').unbind("click").click(function() {
+
+        //deleteModel()
+        //ajaxRequest()
+        // swal("Votre Compte a ete créé", "Un mail vous a été envoyé.Merci d'activer votre compte a travers le lien d'activation", "success")
+        $('.container').hide()
+            /*  swal({
+                  title: "Compte créé avec succes",
+                  text: "Un mail vous a été envoyé.Merci d'activer votre compte",
+                  icon: "success",
+                  closeOnClickOutside: true,
+                  button: false,
+                  // timer: 3000,
+              });*/
+        $('.progress').show()
+        setTimeout(function() {
+            alert("ok ok");
+            $('.container').show();
+        }, 2000);
+        $('.progress').hide();
+
+    });
+
+    function ajaxRequest() {
+        swal({
+                text: 'Search for a movie. e.g. "La La Land".',
+                content: "input",
+                button: {
+                    text: "Search!",
+                    closeModal: false,
+                },
+            })
+            .then(name => {
+                if (!name) throw null;
+
+                return fetch(`https://itunes.apple.com/search?term=${name}&entity=movie`);
+            })
+            .then(results => {
+                return results.json();
+            })
+            .then(json => {
+                const movie = json.results[0];
+
+                if (!movie) {
+                    return swal("No movie was found!");
+                }
+
+                const name = movie.trackName;
+                const imageURL = movie.artworkUrl100;
+
+                swal({
+                    title: "Top result:",
+                    text: name,
+                    icon: imageURL,
+                });
+            })
+            .catch(err => {
+                if (err) {
+                    swal("Oh noes!", "The AJAX request failed!", "error");
+                } else {
+                    swal.stopLoading();
+                    swal.close();
+                }
+            });
+    }
+
+    function succesToastr(titre, message) {
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "4000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "slideDown",
+            "hideMethod": "slideUp"
+        }
+        toastr["success"](message, titre)
+    }
+
+
+
+    function deleteModel() {
+        swal({
+                title: "Etes vous sûre?",
+                text: "Vous allez supprimer definitivement une experience.",
+                icon: "warning",
+                buttons: ["Annuler", "ok"],
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    /* swal("Poof! Your imaginary file has been deleted!", {
+                         icon: "success",
+                     });*/
+                    succesToastr(
+                        "Opperation reussi",
+                        "Suppression effectuée. ")
+                } else {
+                    return fetch(`https://itunes.apple.com/search?term=${name}&entity=movie`);
+
+                }
+            });
+    }
+    $(document).ready(function() {
+        $(".ajouter").hide()
+        $(".progress").hide()
+    });
+</script>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chart.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <title>charts</title>
+</head>
+
+<body>
+    <figure class=" ">
+
+
+
+
+        <div id="echap">
+
+        </div>
+
+        <div id="exple">
+            jeaunclaude.attiglah@vneuron.com
+        </div>
+        <div id="ex1">
+
+
+        </div>
+        <div id="ex2">
+            jeaunclaude.attiglah@vneuron.com
+        </div>
+        <p class="highcharts-description">
+            Pie charts are very popular for showing a compact overview of a composition or comparison. While they can be harder to read than column charts, they remain a popular choice for small datasets.
+        </p>
+    </figure>
+
+</body>
+
+</html>
+
+<script src="charts.js"></script>
+
+<script>
+    data = [{
+        "id": 24,
+        "statut": "Accepté",
+        "dateDeCandidature": "2019-02-05",
+        "dateAcceptation": "2019-01-29",
+        "dateConfirmationCandidat": "2019-02-10",
+        "dateNiveauEntretient": "2019-03-06",
+        "dateNiveauEvaluateur": "2019-03-14",
+        "dateNiveauQuizz": "2019-03-20",
+        "dateRefus": "2017-02-05",
+        "commentaire": null,
+        "courante": false,
+        "quizzs": []
+    }, {
+        "id": 24,
+        "statut": "Accepté",
+        "dateDeCandidature": "2019-02-05",
+        "dateAcceptation": "2019-01-30",
+        "dateConfirmationCandidat": "2019-02-05",
+        "dateNiveauEntretient": "2019-02-06",
+        "dateNiveauEvaluateur": "2019-03-05",
+        "dateNiveauQuizz": "2019-02-06",
+        "dateRefus": "2017-02-05",
+        "commentaire": null,
+        "courante": false,
+        "quizzs": []
+    }, {
+        "id": 24,
+        "statut": "Accepté",
+        "dateDeCandidature": "2019-02-05",
+        "dateAcceptation": "2019-02-3",
+        "dateConfirmationCandidat": "2019-02-05",
+        "dateNiveauEntretient": "2019-02-06",
+        "dateNiveauEvaluateur": "2019-03-05",
+        "dateNiveauQuizz": "2019-02-06",
+        "dateRefus": "2017-02-05",
+        "commentaire": null,
+        "courante": false,
+        "quizzs": []
+    }]
+
+    console.log(statut)
+
+    var datesAceptattion = Array();
+    var statut = Array();
+    var datesDeCandidature = Array();
+    var datesConfirmationCandidat = Array();
+    var datesNiveauEntretient = Array();
+    var datesNiveauEvaluateur = Array();
+    var datesNiveauQuizz = Array();
+    var datesRefus = Array();
+
+    for (var k in data) {
+        datesDeCandidature.push(data[k].dateDeCandidature);
+        datesAceptattion.push(differenceDateEnJours(data[k].dateDeCandidature, data[k].dateAcceptation));
+        statut.push(data[k].statut)
+        datesNiveauEntretient.push(differenceDateEnJours(data[k].dateDeCandidature, data[k].dateNiveauEntretient));
+    }
+
+
+    var nombreCandidatures = data.length;
+    var tempsMoyenAacceptation = 0;
+    for (var k in data) {
+
+        tempsMoyenAacceptation += differenceDateEnJours(data[k].dateDeCandidature, data[k].dateAcceptation) / nombreCandidatures;
+        statut.push(data[k].statut)
+        datesNiveauEntretient.push(differenceDateEnJours(data[k].dateDeCandidature, data[k].dateNiveauEntretient));
+    }
+
+    console
+    console.log(tempsMoyenAacceptation)
+    console.log(statut)
+
+
+
+    // console.log(differenceDateEnJours("2020-1-18", "2020-1-15"));
+
+
+    Highcharts.chart('echap', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Stacked bar chart'
+        },
+        xAxis: {
+            categories: statut,
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total fruit consumption'
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+            name: 'Temps Mise Entretien 3',
+            data: datesNiveauEntretient
+        }, {
+            name: 'Temps Mise Entretien 2',
+            data: datesNiveauEntretient
+        }, {
+            name: 'Temps Aceptation 1',
+            data: datesAceptattion
+        }]
+    });
+
+    function differenceDateEnJours(d1, d2) {
+        var diffTime = Math.abs(new Date(d1) - new Date(d2));
+        var value = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        if (value == 0) {
+            value += 1;
+        }
+        return value;
+    }
+
+    function candidaturesTraiementsEtats(dateDebut = "2019-02", dateFin = "2020-06") {
+
+        if (document.getElementById('ex2') != null) {
+            var dates = Array()
+            var values = Array()
+            $.ajax({
+
+                url: serveurSource + "/candidatures/dateDeCandidatureParIntervalle?dateDebut=" +
+                    dateDebut + "&dateFin=" + dateFin,
+                method: "get",
+                dataType: "json",
+                success: function(data) {
+
+                    var datesAceptattion = Array();
+                    var statut = Array();
+                    var datesDeCandidature = Array();
+                    var datesConfirmationCandidat = Array();
+                    var datesNiveauEntretient = Array();
+                    var datesNiveauEvaluateur = Array();
+                    var datesNiveauQuizz = Array();
+                    var datesRefus = Array();
+
+                    for (var k in data) {
+
+                        datesDeCandidature.push(data[k].dateDeCandidature);
+                        datesAceptattion.push(differenceDateEnJours(data[k].dateDeCandidature, data[k].dateAcceptation));
+                        statut.push(data[k].statut)
+                        datesNiveauEntretient.push(differenceDateEnJours(data[k].dateDeCandidature, data[k].dateNiveauEntretient));
+                    }
+                    console.log(datesAceptattion)
+                    console.log(statut)
+
+                    Highcharts.chart('echap', {
+                        chart: {
+                            type: 'bar'
+                        },
+                        title: {
+                            text: 'Stacked bar chart'
+                        },
+                        xAxis: {
+                            categories: statut,
+                        },
+                        yAxis: {
+                            min: 0,
+                            title: {
+                                text: 'Total fruit consumption'
+                            }
+                        },
+                        legend: {
+                            reversed: true
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        plotOptions: {
+                            series: {
+                                stacking: 'normal'
+                            }
+                        },
+                        series: [{
+                            name: 'Temps Mise Entretient',
+                            data: datesNiveauEntretient
+                        }, {
+                            name: 'Temps Aceptation',
+                            data: datesAceptattion
+                        }]
+                    });
+                },
+                error: function(errMsg) {
+                    console.log(errMsg);
+                }
+            });
+        }
+    }
+
+    candidaturesTraiementsEtats();
+</script>
